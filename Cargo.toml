@@ -3,6 +3,7 @@ members = [
 	"bin/tx-decoder",
 	"bin/v14-test",
 	"desub",
+	"desub-bindings",
 	"desub-current",
 	"desub-legacy",
 	"desub-json-resolver",

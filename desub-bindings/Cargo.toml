@@ -1,0 +1,32 @@
+[package]
+name = "desub-bindings"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[features]
+default = ["console_error_panic_hook"]
+
+[dependencies]
+console_error_panic_hook = { version = "0.1.7", optional = true }
+js-sys = { version = "0.3.55" }
+sha2 = { version = "0.10.0", features = ["default"] }
+tiny-bip39 = { version = "0.8.2" }
+wasm-bindgen = { version = "0.2.78" }
+wasm-bindgen-futures = { version = "0.4.28" }
+wee_alloc = { version = "0.4.5" }
+desub-current = { path = "../desub-current" }
+
+[profile.dev]
+codgen-units = 1
+incremental = true
+lto = true
+opt-level = "z"
+
+[profile.release]
+codgen-units = 1
+incremental = true
+lto = true
+opt-level = "z"

@@ -1,0 +1,4 @@
+{
+  "name": "desub-bindings-beta",
+  "files": ["deno", "nodejs", "web"]
+}
